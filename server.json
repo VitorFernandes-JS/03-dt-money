@@ -1,0 +1,20 @@
+{
+    "transactions": [
+        {
+            "id": "1",
+            "date": "2017-01-01",
+            "amount": "100.00",
+            "description": "Test transaction",
+            "category": "Test category",
+            "account": "Test account"
+        },
+        {
+            "id": "2",
+            "date": "2017-01-02",
+            "amount": "200.00",
+            "description": "Test transaction 2",
+            "category": "Test category 2",
+            "account": "Test account 2"
+        }
+    ]
+}
