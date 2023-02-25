@@ -2,19 +2,19 @@
     "transactions": [
         {
             "id": "1",
-            "date": "2017-01-01",
-            "amount": "100.00",
-            "description": "Test transaction",
+            "createdAt": "2017-01-01 00:00:00",
+            "price": "60.00",
+            "description": "Lanche",
             "category": "Test category",
-            "account": "Test account"
+            "type": "outcome"
         },
         {
             "id": "2",
-            "date": "2017-01-02",
-            "amount": "200.00",
+            "createdAt": "2017-01-02 00:00:01",
+            "price": "14000.00",
             "description": "Test transaction 2",
             "category": "Test category 2",
-            "account": "Test account 2"
+            "type": "income"
         }
     ]
 }

@@ -1,5 +1,6 @@
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
+import { useTransactionContext } from "../../contexts/TransactionsContext";
 import { SearchForm } from "./components/SearchForm";
 import {
   PriceHighlight,
@@ -8,6 +9,8 @@ import {
 } from "./styles";
 
 export function Transactions() {
+  const { transactions } = useTransactionContext();
+
   return (
     <div>
       <Header />
@@ -17,30 +20,20 @@ export function Transactions() {
         <SearchForm />
         <TransactionsTable>
           <tbody>
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighlight variant="income">R$ 12.000,00</PriceHighlight>
-              </td>
-              <td>Venda</td>
-              <td>10/10/2021</td>
-            </tr>
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighlight variant="outcome">- R$ 5.000,00</PriceHighlight>
-              </td>
-              <td>Venda</td>
-              <td>10/10/2021</td>
-            </tr>
-            <tr>
-              <td width="50%">Desenvolvimento de site</td>
-              <td>
-                <PriceHighlight variant="outcome">- R$ 5.000,00</PriceHighlight>
-              </td>
-              <td>Venda</td>
-              <td>10/10/2021</td>
-            </tr>
+            {transactions.map((transactions) => {
+              return (
+                <tr key={transactions.id}>
+                  <td width="50%">{transactions.description}</td>
+                  <td>
+                    <PriceHighlight variant={transactions.type}>
+                      {transactions.price}
+                    </PriceHighlight>
+                  </td>
+                  <td>{transactions.category}</td>
+                  <td>{transactions.createdAt}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </TransactionsTable>
       </TransactionsContainer>
