@@ -3,7 +3,7 @@
         {
             "id": "1",
             "createdAt": "2017-01-01 00:00:00",
-            "price": "60.00",
+            "price": 60.00,
             "description": "Lanche",
             "category": "Test category",
             "type": "outcome"
@@ -11,7 +11,7 @@
         {
             "id": "2",
             "createdAt": "2017-01-02 00:00:01",
-            "price": "14000.00",
+            "price": 14000.00,
             "description": "Test transaction 2",
             "category": "Test category 2",
             "type": "income"
